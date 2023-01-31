@@ -1,0 +1,53 @@
+.wd-bottom-border-highlighted {
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-color: rgb(29, 161, 242);
+}
+.wd-float-label {
+    float: left;
+    padding: 16px;
+}
+.wd-label {
+    /*Adjust font size from 15px to 25px for better visual effects.*/
+    font-size: 25px;
+    text-decoration: none;
+}
+.wd-search-bar {
+    border-radius: 50px;
+    border-color: black;
+    color: white;
+    background-color: rgb(33, 35, 39);
+    width: 90%;
+    height: 30px;
+}
+.wd-gear {
+    position: absolute;
+    /*Assignment instruction says 12px. I think it is too close to the border so I adjust it to 20px.*/
+    right: 20px;
+    font-size: 25px;
+    text-decoration:none;
+    color: rgb(29, 161, 242);
+}
+.wd-separator {
+    height: 8px;
+    width: 100%;
+    background-color: rgb(33, 36, 38);
+    border-left-color: rgb(33, 36, 38);
+    border-right-color: rgb(33, 36, 38);
+    border-top-color: rgb(110, 118, 125);
+    border-bottom-color: rgb(110, 118, 125);
+    border-style: solid;
+}
+.wd-rounded-image {
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+}
+.wd-vertical-space {
+    height: 100px;
+}
+.wd-rounded-logo {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
