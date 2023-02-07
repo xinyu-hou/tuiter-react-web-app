@@ -1,0 +1,144 @@
+/* a4 */
+.wd-font-size-12 {
+    font-size: 12px;
+}
+.wd-font-size-18 {
+    font-size: 18px;
+}
+.btn-primary.wd-override-btn {
+    width: 100%;
+    border-radius: 20px;
+}
+.btn-primary.wd-tuiter-override-btn {
+    width: 100%;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-color: rgb(28, 134, 235);
+}
+.wd-img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.wd-bottom-left {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+}
+.wd-bottom-left-2 {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+}
+.wd-rounded-large-logo {
+    border-radius: 20px;
+    height: 90px;
+    width: 90px;
+    margin-left: 10px;
+}
+.wd-rounded-corners {
+    border-radius: 20px;
+}
+.wd-slight-rounded-corners {
+    border-radius: 10px;
+}
+.wd-tuiter-color {
+    color: rgb(28, 134, 235);
+}
+.wd-sidebar-description-position {
+    position: absolute;
+    left: 50px;
+}
+.list-group-item.wd-left-sidebar {
+    border-width: 0px;
+}
+.list-group-item.wd-right-sidebar {
+    border-width: 0px;
+    background-color: #F5F5F5;
+}
+.active.wd-active {
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+    font-weight: bolder;
+}
+.active.wd-nav-link-active {
+    font-weight: bold;
+    border-width: 0px;
+}
+.wd-color-black {
+    color: black;
+}
+.wd-whitesmoke-border {
+    border-color: #F5F5F5;
+}
+.nav-item.wd-nav-item-active {
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(28, 134, 235);
+}
+.wd-no-bottom-border {
+    border-bottom-width: 0px;
+}
+.wd-tuiter-search-color {
+    color: rgb(98, 112, 122);
+    background-color: rgb(235, 240, 241);
+    border-color: rgb(235, 240, 241);
+}
+.wd-no-text-decor {
+    text-decoration: none;
+}
+/* a3 */
+.wd-bottom-border-highlighted {
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-color: rgb(29, 161, 242);
+}
+.wd-float-label {
+    float: left;
+    padding: 16px;
+}
+.wd-label {
+    /*Adjust font size from 15px to 25px for better visual effects.*/
+    font-size: 25px;
+    text-decoration: none;
+}
+.wd-search-bar {
+    border-radius: 50px;
+    border-color: black;
+    color: white;
+    background-color: rgb(33, 35, 39);
+    width: 90%;
+    height: 30px;
+}
+.wd-gear {
+    position: absolute;
+    /*Assignment instruction says 12px. I think it is too close to the border so I adjust it to 20px.*/
+    right: 20px;
+    font-size: 25px;
+    text-decoration:none;
+    color: rgb(29, 161, 242);
+}
+.wd-separator {
+    height: 8px;
+    width: 100%;
+    background-color: rgb(33, 36, 38);
+    border-left-color: rgb(33, 36, 38);
+    border-right-color: rgb(33, 36, 38);
+    border-top-color: rgb(110, 118, 125);
+    border-bottom-color: rgb(110, 118, 125);
+    border-style: solid;
+}
+.wd-rounded-image {
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+}
+.wd-vertical-space {
+    height: 100px;
+}
+.wd-rounded-logo {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
