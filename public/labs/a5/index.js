@@ -268,8 +268,6 @@ const init = () => {
     }
     hideBtn.click(hideHandler);
     showBtn.click(showHandler);
-    // 2.24 Creating a TODO List
-
 }
 $(init);
 
