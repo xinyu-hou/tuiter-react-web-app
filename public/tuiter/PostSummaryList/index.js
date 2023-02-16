@@ -5,7 +5,7 @@ const PostSummaryList = () => {
         <ul class="list-group mb-2">
             ${
                 posts.map(post => {
-                return(PostSummaryItem(post));
+                    return(PostSummaryItem(post));
                 }).join('')
             }
         </ul>
@@ -14,4 +14,4 @@ const PostSummaryList = () => {
 export default PostSummaryList;
 
 // Testing
-// $('#wd-postlist').append(`${PostSummaryList()}`);
+$('#wd-postlist').append(`${PostSummaryList()}`);

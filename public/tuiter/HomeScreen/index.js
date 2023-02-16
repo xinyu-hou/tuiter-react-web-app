@@ -1,6 +1,7 @@
 /* global $ */
 import NavigationSidebar from "../NavigationSidebar/index.js";
 import PostSummaryList from "../PostSummaryList/index.js";
+import PostList from "../PostList";
 
 function homeComponent() {
     $('#wd-home').append(`
@@ -9,7 +10,7 @@ function homeComponent() {
                 ${NavigationSidebar('Home')}
             </div>
             <div class="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                TODO Home
+                ${PostList()}
             </div>
             <div class="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-4">
                 ${PostSummaryList()}
