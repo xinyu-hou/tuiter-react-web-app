@@ -270,9 +270,3 @@ const init = () => {
     showBtn.click(showHandler);
 }
 $(init);
-
-
-
-console.log()
-console.log()
-console.log()
