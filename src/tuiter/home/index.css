@@ -1,19 +1,7 @@
 /* a4 */
-.wd-font-size-12 {
-    font-size: 12px;
-}
-.wd-font-size-18 {
-    font-size: 18px;
-}
 .btn-primary.wd-override-btn {
     width: 100%;
     border-radius: 20px;
-}
-.btn-primary.wd-tuiter-override-btn {
-    width: 100%;
-    border-radius: 20px;
-    font-weight: bolder;
-    background-color: rgb(28, 134, 235);
 }
 .wd-img-container {
     position: relative;
@@ -25,68 +13,11 @@
     bottom: 0px;
     left: 10px;
 }
-.wd-bottom-left-2 {
-    position: absolute;
-    bottom: 40px;
-    left: 10px;
-}
 .wd-rounded-large-logo {
     border-radius: 20px;
     height: 90px;
     width: 90px;
     margin-left: 10px;
-}
-.wd-rounded-corners {
-    border-radius: 20px;
-}
-.wd-slight-rounded-corners {
-    border-radius: 10px;
-}
-.wd-tuiter-color {
-    color: rgb(28, 134, 235);
-}
-.wd-sidebar-description-position {
-    position: absolute;
-    left: 50px;
-}
-.list-group-item.wd-left-sidebar {
-    border-width: 0px;
-}
-.list-group-item.wd-right-sidebar {
-    border-width: 0px;
-    background-color: #F5F5F5;
-}
-.active.wd-active {
-    background-color: transparent;
-    border-color: transparent;
-    color: black;
-    font-weight: bolder;
-}
-.active.wd-nav-link-active {
-    font-weight: bold;
-    border-width: 0px;
-}
-.wd-color-black {
-    color: black;
-}
-.wd-whitesmoke-border {
-    border-color: #F5F5F5;
-}
-.nav-item.wd-nav-item-active {
-    border-bottom-width: 5px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(28, 134, 235);
-}
-.wd-no-bottom-border {
-    border-bottom-width: 0px;
-}
-.wd-tuiter-search-color {
-    color: rgb(98, 112, 122);
-    background-color: rgb(235, 240, 241);
-    border-color: rgb(235, 240, 241);
-}
-.wd-no-text-decor {
-    text-decoration: none;
 }
 /* a3 */
 .wd-bottom-border-highlighted {
@@ -140,5 +71,50 @@
 .wd-rounded-logo {
     height: 15px;
     width: 15px;
+    border-radius: 50%;
+}
+.wd-bg-color-black {
+    background-color: black;
+}
+.wd-color-highlighted {
+    color: rgb(29, 161, 242);
+}
+.wd-color-not-highlighted {
+    color: rgb(110, 118, 125);
+}
+.wd-color-white {
+    color: white;
+}
+.wd-border {
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(47, 51, 54);
+}
+.wd-left-margin {
+    margin-left: 16px;
+}
+.wd-top-margin {
+    margin-top: 10px;
+}
+.wd-float-done {
+    clear: both;
+}
+.wd-inline-element {
+    display: inline-block;
+}
+hr {
+    border-color: rgb(110, 118, 125);
+}
+.wd-more {
+    position: absolute;
+    right: 20px;
+}
+.wd-stable-link {
+    text-decoration: none;
+    color: inherit;
+}
+.wd-avatar {
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
 }

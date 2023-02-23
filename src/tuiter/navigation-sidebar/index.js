@@ -1,14 +1,15 @@
 import React from "react";
+import {Link} from "react-router-dom";
+import {useLocation} from "react-router";
 
-const NavigationSidebar = (
-    {
-        active = 'explore'
-    }
-) => {
+const NavigationSidebar = () => {
+    const {pathname} = useLocation();
+    const paths = pathname.split('/');
+    const active = paths[2];
     return (
         <div className="list-group">
             <a className="list-group-item">Tuiter</a>
-            <a className={`list-group-item
+            <Link to="/tuiter/home" className={`list-group-item
                     ${active === 'home'?'active':''}`}>
                 <div className="d-none d-xl-block">
                     <i className="bi bi-house-fill"></i> Home
@@ -16,8 +17,8 @@ const NavigationSidebar = (
                 <div className="d-xl-none">
                     <i className="bi bi-house-fill"></i>
                 </div>
-            </a>
-            <a className={`list-group-item
+            </Link>
+            <Link to="/tuiter/explore" className={`list-group-item
                     ${active === 'explore'?'active':''}`}>
                 <div className="d-none d-xl-block">
                     <i className="bi bi-hash"></i> Explore
@@ -25,7 +26,15 @@ const NavigationSidebar = (
                 <div className="d-xl-none">
                     <i className="bi bi-hash"></i>
                 </div>
-            </a>
+            </Link>
+            <Link to="/" className={`list-group-item`}>
+                <div className="d-none d-xl-block">
+                    <i className="bi bi-pencil-fill"></i> Labs
+                </div>
+                <div className="d-xl-none">
+                    <i className="bi bi-pencil-fill"></i>
+                </div>
+            </Link>
             <a className={`list-group-item
                     ${active === 'notifications'?'active':''}`}>
                 <div className="d-none d-xl-block">
