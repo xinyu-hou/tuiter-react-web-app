@@ -38,7 +38,7 @@ const HomePostItem = ({post}) => {
                         <div className="d-inline float-end text-muted">
                             <a className="wd-stable-link fw-bold">...</a>
                         </div>
-                        <div>{post.brief} <a href={post.href} className="text-decoration-none">{post.hrefName}</a></div>
+                        <div>{post.brief} <a target="_blank" href={post.href} className="text-decoration-none">{post.hrefName}</a></div>
                         <div className="card mt-2 mb-2 border border-muted bg-transparent rounded-4">
                             <div className="border-bottom border-light">
                                 <img className="card-img-top rounded-4" src={`/images/${post.image}`}/>
