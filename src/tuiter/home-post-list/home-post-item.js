@@ -5,7 +5,7 @@ const HomePostItem = ({post}) => {
     let titleAndMessage;
     let retuited;
     if (post.showThisThread) {
-        showThread = <a href="#" className="mt-2 text-decoration-none">Show this thread</a>
+        showThread = <a className="mt-2 text-decoration-none">Show this thread</a>
     }
     if (post.title) {
         titleAndMessage =
@@ -36,7 +36,7 @@ const HomePostItem = ({post}) => {
                         <div className="d-inline text-primary"><i className="bi bi-check-circle-fill"></i></div>
                         <div className="d-inline"> @{post.handle} &middot; {post.time}</div>
                         <div className="d-inline float-end text-muted">
-                            <a href="#" className="wd-stable-link fw-bold">...</a>
+                            <a className="wd-stable-link fw-bold">...</a>
                         </div>
                         <div>{post.brief} <a href={post.href} className="text-decoration-none">{post.hrefName}</a></div>
                         <div className="card mt-2 mb-2 border border-muted bg-transparent rounded-4">
@@ -47,25 +47,25 @@ const HomePostItem = ({post}) => {
                         </div>
                         <div className="row text-muted">
                             <div className="col-3">
-                                <a href="#" className="wd-stable-link">
+                                <a className="wd-stable-link">
                                     <i className="bi bi-chat"></i>
                                     <div className="d-inline"> {post.numComments}</div>
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a href="#" className="wd-stable-link">
+                                <a className="wd-stable-link">
                                     <i className="bi bi-arrow-repeat"></i>
                                     <div className="d-inline"> {post.numRetuits}</div>
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a href="#" className="wd-stable-link">
+                                <a className="wd-stable-link">
                                     <i className="bi bi-heart"></i>
                                     <div className="d-inline"> {post.numLikes}</div>
                                 </a>
                             </div>
                             <div className="col-3">
-                                <a href="#" className="wd-stable-link">
+                                <a className="wd-stable-link">
                                     <i className="bi bi-upload"></i>
                                 </a>
                             </div>
