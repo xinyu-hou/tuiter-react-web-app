@@ -5,7 +5,7 @@ const HomePostItem = ({post}) => {
     let titleAndMessage;
     let retuited;
     if (post.showThisThread) {
-        showThread = <a href="" className="mt-2 text-decoration-none">Show this thread</a>
+        showThread = <a href="#" className="mt-2 text-decoration-none">Show this thread</a>
     }
     if (post.title) {
         titleAndMessage =
@@ -36,7 +36,7 @@ const HomePostItem = ({post}) => {
                         <div className="d-inline text-primary"><i className="bi bi-check-circle-fill"></i></div>
                         <div className="d-inline"> @{post.handle} &middot; {post.time}</div>
                         <div className="d-inline float-end text-muted">
-                            <a href="" className="wd-stable-link fw-bold">...</a>
+                            <a href="#" className="wd-stable-link fw-bold">...</a>
                         </div>
                         <div>{post.brief} <a href={post.href} className="text-decoration-none">{post.hrefName}</a></div>
                         <div className="card mt-2 mb-2 border border-muted bg-transparent rounded-4">
