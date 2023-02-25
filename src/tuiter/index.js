@@ -13,14 +13,14 @@ function Tuiter() {
             </div>
             <div className="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
                 <Routes>
-                    <Route path=""    element={<ExploreComponent/>}/>
+                    <Route index    element={<ExploreComponent/>}/>
                     <Route path="home"    element={<HomeComponent/>}/>
                     <Route path="explore" element={<ExploreComponent/>}/>
                 </Routes>
             </div>
             <div className="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-4">
                 <Routes>
-                    <Route path=""    element={<WhoToFollowList/>}/>
+                    <Route index    element={<WhoToFollowList/>}/>
                     <Route path="home"    element={<WhoToFollowList/>}/>
                     <Route path="explore" element={<WhoToFollowList/>}/>
                 </Routes>
