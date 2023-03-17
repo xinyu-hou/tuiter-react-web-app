@@ -1,0 +1,22 @@
+.wd-nudge-up {
+    bottom: 4px;
+}
+.wd-nudge-left {
+    right: 30px;
+}
+.wd-nudge-right {
+    left: 20px;
+}
+.wd-nudge-down {
+    top: 60px;
+}
+.wd-nudge-bottom-left {
+    top: 100%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+}
+.wd-nudge-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

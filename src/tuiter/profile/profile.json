@@ -1,0 +1,16 @@
+[
+  {
+    "firstName": "Xinyu",
+    "lastName": "Hou",
+    "handle": "@xinyu-hou",
+    "profilePicture": "profile.jpeg",
+    "bannerPicture": "banner.jpeg",
+    "bio": "Currently, a MSCS student at Northeastern University. In the future, a MathWorker.",
+    "website": "xinyu-hou.github.io",
+    "location": "Boston, MA",
+    "dateOfBirth": "1/1/1997",
+    "dateJoined": "March 2023",
+    "followingCount": 777,
+    "followersCount": 1211
+  }
+]
