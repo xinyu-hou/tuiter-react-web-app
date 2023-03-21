@@ -1,14 +1,55 @@
-// import "./index.css";
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import "./index.css";
+import DatePicker from "./date-picker"
 import {Link} from "react-router-dom";
+import {saveProfile} from "../profile/profile-reducer";
 
 const EditProfileComponent = () => {
-    const profileItem = useSelector((state) => state.profile[0]);
-    let [profileComponent, setPorfileComponent] = useState('');
+    let profileItem = useSelector((state) => state.profile[0]);
+    let [firstName, setFirstName] = useState(profileItem.firstName);
+    let [lastName, setLastName] = useState(profileItem.lastName);
+    let [fullName, setFullName] = useState(firstName + " " + lastName)
+    let [bio, setBio] = useState(profileItem.bio);
+    let [location, setLocation] = useState(profileItem.location);
+    let [website, setWebsite] = useState(profileItem.website);
+    let [dob, setDob] = useState(profileItem.dateOfBirth);
     const dispatch = useDispatch();
-    const fullName = profileItem.firstName + " " + profileItem.lastName;
+    const saveProfileClickHandler = () => {
+        // Retrieve first and last names from full name
+        const fullNameArray = fullName.split(/(\s+)/);
+        firstName = fullNameArray[0];
+        lastName = fullNameArray[2];
+        profileItem = {
+            ...profileItem,
+            firstName: firstName,
+            lastName: lastName,
+            bio: bio,
+            location: location,
+            website: website,
+            dateOfBirth: dob
+        }
+        dispatch(saveProfile(profileItem));
+    }
+    const fullNameChangeHandler = (event) => {
+        const updatedFullName = event.target.value;
+        setFullName(updatedFullName);
+    }
+    const bioChangeHandler = (event) => {
+        const updatedBio = event.target.value;
+        setBio(updatedBio);
+    }
+    const locationChangeHandler = (event) => {
+        const updatedLocation = event.target.value;
+        setLocation(updatedLocation);
+    }
+    const websiteChangeHandler = (event) => {
+        const updatedWebsite = event.target.value;
+        setWebsite(updatedWebsite);
+    }
+    const dobChangeHandler = (updatedDob) => {
+        setDob(updatedDob);
+    }
     return(
         <>
             {/*header*/}
@@ -19,8 +60,8 @@ const EditProfileComponent = () => {
                 <div className="col-11">
                     <h4 className="fw-bold mb-0 d-inline">Edit Profile</h4>
                     <div className="d-inline float-end position-relative wd-nudge-up me-4">
-                        <button className="btn btn-dark rounded-pill border">
-                            <Link to="/tuiter/editProfile" className="link-light text-decoration-none">
+                        <button className="btn btn-dark rounded-pill border" onClick={saveProfileClickHandler}>
+                            <Link to="../profile" className="link-light text-decoration-none">
                                 <span>Save</span>
                             </Link>
                         </button>
@@ -55,29 +96,28 @@ const EditProfileComponent = () => {
             <div className="position-relative wd-nudge-down">
                 <form className="form-floating mb-4">
                     <input type="text" className="form-control" id="nameInput"
-                           value={fullName}/>
+                           value={fullName} onChange={fullNameChangeHandler}/>
                         <label htmlFor="nameInput">Name</label>
                 </form>
                 <form className="form-floating mb-4">
                     <input type="text" className="form-control" id="bioInput"
-                           value={profileItem.bio}/>
+                           value={bio} onChange={bioChangeHandler}/>
                     <label htmlFor="bioInput">Bio</label>
                 </form>
                 <form className="form-floating mb-4">
                     <input type="text" className="form-control" id="locationInput"
-                           value={profileItem.location}/>
+                           value={location} onChange={locationChangeHandler}/>
                     <label htmlFor="locationInput">Location</label>
                 </form>
                 <form className="form-floating mb-4">
                     <input type="text" className="form-control" id="websiteInput"
-                           value={profileItem.website}/>
+                           value={website} onChange={websiteChangeHandler}/>
                     <label htmlFor="websiteInput">Website</label>
                 </form>
-                <form className="form-floating mb-4">
-                    <input type="date" className="form-control" id="dobInput"
-                           value={profileItem.dateOfBirth}/>
-                    <label htmlFor="dobInput">Date of Birth</label>
-                </form>
+                <div className="mb-4">
+                    <DatePicker defaultDate={dob} onChange={dobChangeHandler}/>
+                    {dob}
+                </div>
                 <div>
                     <span className="d-inline">Switch to professional</span>
                     <a className="bi bi-chevron-right d-inline float-end text-black"></a>

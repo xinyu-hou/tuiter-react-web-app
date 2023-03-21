@@ -5,9 +5,6 @@ import {Link} from "react-router-dom";
 
 const ProfileComponent = () => {
     const profileItem = useSelector((state) => state.profile[0]);
-    let [profileComponent, setPorfileComponent] = useState('');
-    const dispatch = useDispatch();
-
     return(
         <>
             {/*header*/}

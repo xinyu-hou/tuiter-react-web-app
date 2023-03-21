@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import tuits from './tuits.json';
 
-const currentUser = {
+let currentUser = {
     "userName": "NASA",
     "handle": "@nasa",
     "image": "nasa_logo.png",
 };
 
-const templateTuit = {
+let templateTuit = {
     ...currentUser,
     "topic": "Space",
     "time": "2h",
@@ -33,9 +33,17 @@ const tuitsSlice = createSlice({
             }
         },
         createTuit(state, action) {
+            // templateTuit = {
+            //     ...templateTuit,
+            //     userName:
+            // }
+            // templateTuit.
+            // console.log("templateTuit:" + templateTuit.userName)
+            console.log("payload: " + action.payload.userName);
             state.unshift({
-                ...action.payload,
                 ...templateTuit,
+                ...action.payload,
+                // ...templateTuit,
                 _id: (new Date()).getTime(),
             })
         },
