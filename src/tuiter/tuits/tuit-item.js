@@ -1,10 +1,13 @@
 import React from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import TuitStats from "./tuit-stats";
 import {deleteTuit} from "./tuits-reducer";
 
 const TuitItem = ({tuit}) => {
     const dispatch = useDispatch();
+    const profileItem = useSelector((state) => state.profile[0]);
+    const profileUserName = profileItem.firstName + " " + profileItem.lastName;
+    const updateToDateUsername = (profileItem.handle === tuit.handle) ? profileUserName : tuit.userName;
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuit(id));
     }
@@ -18,7 +21,7 @@ const TuitItem = ({tuit}) => {
                     <div className="ms-2 me-4">
                         <i className="bi bi-x-lg float-end"
                            onClick={() => deleteTuitHandler(tuit._id)}></i>
-                        <div className="d-inline fw-bold">{tuit.userName} </div>
+                        <div className="d-inline fw-bold">{updateToDateUsername} </div>
                         <div className="d-inline text-primary"><i className="bi bi-patch-check-fill"></i></div>
                         <div className="d-inline"> {tuit.handle} &middot; {tuit.time}</div>
                         <div>{tuit.tuit}</div>
