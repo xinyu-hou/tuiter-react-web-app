@@ -33,17 +33,9 @@ const tuitsSlice = createSlice({
             }
         },
         createTuit(state, action) {
-            // templateTuit = {
-            //     ...templateTuit,
-            //     userName:
-            // }
-            // templateTuit.
-            // console.log("templateTuit:" + templateTuit.userName)
-            console.log("payload: " + action.payload.userName);
             state.unshift({
                 ...templateTuit,
                 ...action.payload,
-                // ...templateTuit,
                 _id: (new Date()).getTime(),
             })
         },

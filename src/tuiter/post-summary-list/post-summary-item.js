@@ -1,4 +1,5 @@
 import React from "react";
+import {useSelector} from "react-redux";
 const PostSummaryItem = (
     {
         post = {
@@ -10,11 +11,14 @@ const PostSummaryItem = (
         }
     }
 ) => {
+    const profileItem = useSelector((state) => state.profile[0]);
+    const profileUserName = profileItem.firstName + " " + profileItem.lastName;
+    const updateToDateUsername = (profileItem.handle === post.handle) ? profileUserName : post.userName;
     return(
         <li className="list-group-item">
             <div className="row">
                 <div className="col-10">
-                    <div>{post.userName} . {post.time}</div>
+                    <div>{updateToDateUsername} . {post.time}</div>
                     <div className="fw-bolder">{post.topic}</div>
                     <div>{post.title}</div>
                 </div>

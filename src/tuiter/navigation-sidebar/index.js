@@ -5,9 +5,7 @@ import {useLocation} from "react-router";
 const NavigationSidebar = () => {
     const {pathname} = useLocation();
     const paths = pathname.split('/');
-    console.log("paths: " + paths);
     const active = (paths[2]) ? paths[2] : 'home';
-    console.log("active: " + active);
     return (
         <div className="list-group">
             <a className="list-group-item">Tuiter</a>

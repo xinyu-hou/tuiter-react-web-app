@@ -8,8 +8,6 @@ const profileSlice = createSlice({
         saveProfile(state, action) {
             const updatedProfile = action.payload;
             const outdatedProfile = state[0];
-            console.log("reducer side");
-            console.log(updatedProfile);
             outdatedProfile.firstName = updatedProfile.firstName;
             outdatedProfile.lastName = updatedProfile.lastName;
             outdatedProfile.bio = updatedProfile.bio;
