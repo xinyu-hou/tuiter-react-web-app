@@ -18,8 +18,8 @@ const EditProfileComponent = () => {
     const saveProfileClickHandler = () => {
         // Retrieve first and last names from full name
         const fullNameArray = fullName.split(/(\s+)/);
-        firstName = fullNameArray[0];
-        lastName = fullNameArray[2];
+        firstName = (fullNameArray[0]) ? fullNameArray[0] : "";
+        lastName = (fullNameArray[2]) ? fullNameArray[2] : "";
         profileItem = {
             ...profileItem,
             firstName: firstName,
