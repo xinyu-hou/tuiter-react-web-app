@@ -1,7 +1,7 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import TuitStats from "./tuit-stats";
-import {deleteTuit} from "./tuits-reducer";
+import {deleteTuitThunk} from "../../services/tuits-thunks";
 
 const TuitItem = ({tuit}) => {
     const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const TuitItem = ({tuit}) => {
     const profileUserName = profileItem.firstName + " " + profileItem.lastName;
     const updateToDateUsername = (profileItem.handle === tuit.handle) ? profileUserName : tuit.userName;
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     }
     return(
         <div className="border border-muted">
