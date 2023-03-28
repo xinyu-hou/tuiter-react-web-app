@@ -14,7 +14,7 @@ const TuitsList = () => {
     return(
         <ul className="list-group">
             {
-                tuits.length == 0 &&
+                tuits.length === 0 &&
                 <li className="list-group-item">
                     Loading...
                 </li>

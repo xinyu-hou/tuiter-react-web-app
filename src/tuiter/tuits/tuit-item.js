@@ -7,7 +7,7 @@ const TuitItem = ({tuit}) => {
     const dispatch = useDispatch();
     const profileItem = useSelector((state) => state.profile[0]);
     const profileUserName = profileItem.firstName + " " + profileItem.lastName;
-    const updateToDateUsername = (profileItem.handle === tuit.handle) ? profileUserName : tuit.userName;
+    const updateToDateUsername = (profileItem.handle === tuit.handle) ? profileUserName : tuit.username;
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuitThunk(id));
     }
